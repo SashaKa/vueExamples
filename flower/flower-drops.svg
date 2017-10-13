@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1758px" height="699px" viewBox="0 0 1758 699" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>flower-drops</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E40CEB" offset="0%"></stop>
+            <stop stop-color="#FBFF5B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flower" transform="translate(1.000000, 1.000000)" fill="url(#linearGradient-1)" stroke="#979797">
+            <g id="flower-drops">
+                <ellipse id="drop-bottom-left" cx="29" cy="669" rx="29" ry="28"></ellipse>
+                <ellipse id="drop-bottom-right" cx="1727" cy="614" rx="29" ry="28"></ellipse>
+                <ellipse id="drop-right" cx="1368" cy="290" rx="29" ry="28"></ellipse>
+                <ellipse id="drop-middle" cx="869" cy="28" rx="29" ry="28"></ellipse>
+                <ellipse id="drop-left" cx="373" cy="316" rx="29" ry="28"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
