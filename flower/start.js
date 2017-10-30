@@ -2,20 +2,26 @@ const flower = new Vue({
   el: '#app',
   data: {
     showPetal: false,
-    showDrops: true,
+    showDrops: false,
     showDropsClass: ''
   },
   methods: {
-    toggleShowPetal: function() {
+    toggleShowPetal() {
       this.showPetal = true
-      // this.showDropsClass = 'growingDrops'
+
+      setTimeout(() => {
+        this.toggleShowDrops()
+      }, 2500)
+    },
+
+    toggleShowDrops() {
+      this.showDrops = true
+      this.showDropsClass = 'growingDrops'
     }
   },
   created() {
     setTimeout(() => {
       this.toggleShowPetal()
-    }, 2000)
+    }, 1000)
   }
 })
-
-
