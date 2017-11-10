@@ -11,7 +11,7 @@ const flower = new Vue({
 
       setTimeout(() => {
         this.toggleShowDrops()
-      }, 2500)
+      }, 2000)
     },
 
     toggleShowDrops() {

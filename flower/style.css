@@ -21,7 +21,7 @@
   position: absolute;
   top: 70%;
   left: 25%;
-  animation: growStem 2s  1;
+  animation: growStem 2s 1;
 }
 .drops {
   position: absolute;
@@ -32,16 +32,15 @@
   animation: grow 1s 3s 1;
 }
 .growingDrops {
- animation: grow 1s 1;
+  animation: grow 1s 1;
 }
-
 
 @keyframes grow {
   0% {
     width: 0;
   }
   100% {
-    width: 57%;
+    width: 100%;
   }
 }
 
@@ -51,21 +50,19 @@
   }
   100% {
     height: 225px;
-    
   }
 }
 
 @keyframes growStem {
-  0%{
+  0% {
     height: 0%;
     bottom: 0;
   }
   50% {
-    transform: rotateY(360deg)
+    transform: rotateY(360deg);
   }
   100% {
     height: 100%;
     top: 70%;
   }
-  
 }
