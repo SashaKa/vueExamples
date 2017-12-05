@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="313px" height="118px" viewBox="0 0 313 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>flower-drops</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E40CEB" offset="0%"></stop>
+            <stop stop-color="#FBFF5B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flower" transform="translate(1.000000, 1.000000)" fill="url(#linearGradient-1)" stroke="#979797">
+            <g id="flower-drops">
+                <ellipse id="drop-bottom-left" cx="5.13610478" cy="111.340029" rx="5.13610478" ry="4.65997131"></ellipse>
+                <ellipse id="drop-bottom-right" cx="305.863895" cy="102.186514" rx="5.13610478" ry="4.65997131"></ellipse>
+                <ellipse id="drop-right" cx="242.28246" cy="48.2639885" rx="5.13610478" ry="4.65997131"></ellipse>
+                <ellipse id="drop-middle" cx="153.906036" cy="4.65997131" rx="5.13610478" ry="4.65997131"></ellipse>
+                <ellipse id="drop-left" cx="66.0609339" cy="52.5911047" rx="5.13610478" ry="4.65997131"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
