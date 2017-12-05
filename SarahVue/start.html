@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <link rel="stylesheet" href="vue.css">
+</head>
+
+<body>
+    <div id="app">
+        <img src="https://dog.ceo/api/img/appenzeller/n02107908_5312.jpg" class="main-photo">
+        <img src="https://dog.ceo/api/img/sheepdog-english/n02105641_3317.jpg" class="main-profile">
+        <div class="main-info">
+            <span class="name">Julianne</span>
+            <h3>"It's lovely after eat"</h3>
+        </div>
+        <hr>
+        <ul>
+            <li is="individual-comment" v-for="comment in comments" v-bind:commentpost="comment"></li>
+        </ul>
+        <input v-model="newComment" v-on:keyup.enter="addComment" placeholder="Add a comment">
+    </div>
+    <script type="text/x-template" id="comment-template">
+    <li> 
+        <img class="post-img" :src="commentpost.authorImg" /> 
+      <small>{{ commentpost.author }}</small>
+      <p class="post-comment">"{{ commentpost.text }}"</p>
+    </li>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    <script src="vue.js"></script>
+</body>
+
+</html>
