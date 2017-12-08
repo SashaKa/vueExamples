@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <div id="app1">
     <h1 ref="heading">{{ title }}</h1>
     <button v-on:click="show" ref="myButton">Show Paragraph</button>
@@ -25,6 +26,23 @@
   <div id="app3"></div>
   <script src="vuejs.js">
     
+=======
+  <div id="app">
+    <p>{{ sayHello() }}</p>
+  </div>
+  <script>
+    new Vue({
+        el: '#app',
+        data: {
+          title: 'Hello Vue? '
+        },
+        methods: {
+          sayHello: () => {
+            return 'Hello';
+          }
+        }
+      })
+>>>>>>> 16ea28538d22b2c3be950a3ebd0fc4a6d480bb03
   </script>
 </body>
 

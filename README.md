@@ -1,1 +1,0 @@
-Repo for learning and understanding Vue.js
