@@ -111,35 +111,48 @@ new Vue({
         stock: '1'
       }
     ],
-
+    sorted: [],
+    allBrands: [],
+    checkedBrands:[],
     currentPage: 1,
     totalPage: 5,
     pageSize: 4,
     showFromTo: 0,
     showUpTo: 4
   },
-
+  beforeDisplay() {
+    const obj = {}
+    for (i = 0; i < this.goods.length; i++) {
+      const str = this.goods[i].brand
+      obj[str] = true
+    }
+    // this.goods= goods
+    // this.sorted = goods
+    // this.allBrands = Object.keys(obj)
+    console.log(this.goods)
+  },
+  computed: {
+    orderedList() {
+      const list = this.sorted.slice(this.showFromto, this.showUpto)
+      this.totalPage = Math.ceil(this.sorted.length / this.pageSize)
+      return list
+    }
+  },
   methods: {
-    displayGoods(good) {
-      if (this.goods.length >= this.pageSize) {
-        console.log('to many goods')
-      }
-      return this.goods.slice(showFromTo,showUpTo)
+    changeSelect() {
+      this.showUpto = this.pageSize
+      this.currentPage = 1
+      this.showFromto = 0
     },
-
-    nextPage() {
-      if (this.currentPage != this.totalPage) {
-        this.currentPage = this.currentPage + 1
-        this.showFromTo = this.currentPage * this.pageSize
-      
-      }
-    },
-    previousPage() {
-      if (this.currentPage != 1) {
-        this.currentPage = this.currentPage - 1
-        this.showFromTo = (this.currentPage - 2) * this.pageSize
-        
-      }
+    byBrand(){
+      this.sorted= this.goods.filter(elem =>{
+        for(i=0; i<this.checkedBrands.length; i++) {
+          if(elem.brand=== this.checkedBrands[i]) {
+            return elem.brand
+          }
+        }
+      })
     }
   }
 })
+

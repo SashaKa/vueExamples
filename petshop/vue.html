@@ -12,6 +12,18 @@
 <body>
   <div id="app">
     <div class="container">
+      <label for="select">Выводить по</label>
+      <select v-model="pageSize" @change="changeSelect()" name="select">
+        <option value="4">4 </option>
+        <option value="8">8 </option>
+        <option value="12">12</option>
+      </select>
+      <ul>
+        <li v-for="(item, index) in allBrands">
+          <input v-model="checkedBrands" v-on:change="byBrand" type="checkbox" :id="item.toLowerCase()" :value="item">
+          <label :for="item">{{ item }}</label>
+        </li>
+      </ul>
       <div class="container">
         <div class="row">
           <div class="col">Артикул</div>
@@ -24,7 +36,7 @@
         </div>
       </div>
       <div class="container">
-        <div @displayGoods="displayGoods" v-for="good in goods" class="row">
+        <div v-for="item in orderedList" class="row">
           <div class="col">{{ good.artnumber }}</div>
           <div class="col">{{ good.brand }}</div>
           <div class="col">{{ good.name }}</div>
@@ -32,18 +44,20 @@
           <div class="col">{{ good.quantity }}</div>
           <div class="col">{{ good.price }}</div>
           <div class="col">{{ good.stock }}</div>
+
         </div>
       </div>
-      <button @click="previousPage" :class="{'inactive' : currentPage == 1}">
+      <!-- <button @click="previousPage" :class="{'inactive' : currentPage == 1}">
         Предыдущая страница
       </button>
       <p>Страница {{currentPage}} из {{totalPage}} </p>
       <button @click="nextPage" :class="{'inactive' : currentPage == totalPage}">
         Следующая страница
-      </button>
+      </button> -->
     </div>
   </div>
   <script src="index.js"></script>
+
 </body>
 
 </html>
